@@ -10,11 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
     var collectionData = ["1 🐶", "2 🐰", "3 🦊", "4 🦁", "5 🐸", "6 🐮", "7 🐔", "8 🐷", "9 🐒", "10 🦉", "11 🐢", "12 🦖"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let width = (view.frame.size.width - 20) / 2
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.itemSize = CGSize(width: width, height: width)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +29,18 @@ class ViewController: UIViewController {
     }
 
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "DetailSegue" {
+            
+            if let dest = segue.destination as? DetailsViewController, let index = collectionView.indexPathsForSelectedItems?.first {
+                
+                dest.selection = collectionData[index.row]
+            }
+            
+        }
+    
+    }
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -43,7 +61,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+    }
     
 }
 

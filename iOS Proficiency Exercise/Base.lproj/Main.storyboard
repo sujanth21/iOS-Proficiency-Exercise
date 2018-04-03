@@ -48,6 +48,9 @@
                                             <constraint firstItem="Vgw-0I-5Xl" firstAttribute="centerY" secondItem="3W5-GY-grn" secondAttribute="centerY" id="8Wz-vg-CDq"/>
                                             <constraint firstItem="Vgw-0I-5Xl" firstAttribute="centerX" secondItem="3W5-GY-grn" secondAttribute="centerX" id="tPQ-Pm-SCZ"/>
                                         </constraints>
+                                        <connections>
+                                            <segue destination="MMC-rI-FeD" kind="show" identifier="DetailSegue" id="tL5-Yq-wtw"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -66,10 +69,44 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Photo Gallery" id="X2l-7c-QDL"/>
+                    <connections>
+                        <outlet property="collectionView" destination="2uC-gr-dLV" id="9Ty-dA-RIB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="332" y="41.829085457271368"/>
+        </scene>
+        <!--Detail View-->
+        <scene sceneID="KrX-5r-meA">
+            <objects>
+                <viewController id="MMC-rI-FeD" userLabel="Detail View" customClass="DetailsViewController" customModule="iOS_Proficiency_Exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yjr-WX-4aY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvJ-dE-6WN">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EvJ-dE-6WN" firstAttribute="centerX" secondItem="Yjr-WX-4aY" secondAttribute="centerX" id="KSG-N0-xTZ"/>
+                            <constraint firstItem="EvJ-dE-6WN" firstAttribute="centerY" secondItem="Yjr-WX-4aY" secondAttribute="centerY" id="nlx-gw-f3m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6dh-69-lQV"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailsLabel" destination="EvJ-dE-6WN" id="p9m-Xt-i3H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ocp-g5-d2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111" y="42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tO3-dK-vqR">
@@ -79,6 +116,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d88-vf-eX7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.93333333330000001" green="0.34901960780000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>

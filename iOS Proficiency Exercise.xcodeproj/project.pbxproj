@@ -12,6 +12,7 @@
 		8359C0D220731B3100A81FFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8359C0D020731B3100A81FFA /* Main.storyboard */; };
 		8359C0D420731B3100A81FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8359C0D320731B3100A81FFA /* Assets.xcassets */; };
 		8359C0D720731B3100A81FFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8359C0D520731B3100A81FFA /* LaunchScreen.storyboard */; };
+		8359C0E82073388E00A81FFA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8359C0E72073388E00A81FFA /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8359C0D320731B3100A81FFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8359C0D620731B3100A81FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8359C0D820731B3100A81FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8359C0E72073388E00A81FFA /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,6 @@
 				8359C0E0207328D500A81FFA /* View */,
 				8359C0DF207328C800A81FFA /* Model */,
 				8359C0DE20731BCA00A81FFA /* Supporting Files */,
-				8359C0CE20731B3100A81FFA /* ViewController.swift */,
 				8359C0D020731B3100A81FFA /* Main.storyboard */,
 				8359C0D820731B3100A81FFA /* Info.plist */,
 			);
@@ -84,6 +85,8 @@
 		8359C0E0207328D500A81FFA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8359C0CE20731B3100A81FFA /* ViewController.swift */,
+				8359C0E72073388E00A81FFA /* DetailsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			files = (
 				8359C0CF20731B3100A81FFA /* ViewController.swift in Sources */,
 				8359C0CD20731B3100A81FFA /* AppDelegate.swift in Sources */,
+				8359C0E82073388E00A81FFA /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
